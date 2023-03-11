@@ -1,0 +1,20 @@
+Size: 5
+A B A A C 
+Using time 126
+
+Size: 8
+D C C C B D A B 
+Using time 81
+
+Size: 12
+A A B A C D A A A C A B 
+Using time 114
+
+Size: 14
+D D B C C D B D D B A B C D 
+Using time 151
+
+Size: 14
+B C D D D C B B D C B B D D 
+Using time 178
+

@@ -1,0 +1,31 @@
+### 理论分析
+1. 方程的色散型和耗散性
+设谐波解为$e^{i(kt+\omega x)} \Rightarrow \omega = - k$
+
+色散关系为$k=-\omega$, 解为$u(x,t) = e^{i\omega (t-x)}$
+
+其振幅不衰减，无耗散，不是非线性关系，无色散。
+
+2. 格式的耗散性和色散性
+
+> FTBS的 耗散性和色散性
+
+可知，对应的方程为
+$$\frac{e^{ki\Delta t} - 1}{\Delta t} = - \frac{1 - e^{-\omega i \Delta x}}{\Delta x}$$
+$$\Rightarrow e^{ki\Delta t} =1 - \frac{\Delta t}{\Delta x} + \frac{\Delta t}{\Delta x} e^{-\omega i \Delta x}$$
+其结果在复部非线形，所以是色散的。并且在实部上是不确定的，无法确定耗散性（和`r`有关系）。
+
+> FTCS的 耗散性和色散性
+
+可知，对应的方程为
+$$\frac{e^{ki\Delta t} - 1}{\Delta t} = - \frac{e^{\omega i \Delta x} - e^{-\omega i \Delta x}}{\Delta x}$$
+$$\Rightarrow e^{ki\Delta t} =1 - \frac{\Delta t}{\Delta x} (2i\sin {\omega \Delta x})$$
+其结果的模长是增长的，所以是耗散的，并且其频率域上是非线性的，所以是色散的
+
+> LaxW的 耗散性和色散性
+可知，对应的方程为
+$$\frac{e^{ki\Delta t} - 1}{\Delta t} = - \frac{e^{\omega i \Delta x} - e^{-\omega i \Delta x}}{\Delta x} + \frac{\Delta t}{2\Delta x^2}(e^{\omega i \Delta x} + e^{-\omega i \Delta x} - 2)$$
+$$\Rightarrow e^{ki\Delta t} =1 - \frac{\Delta t}{\Delta x} (2i\sin {\omega \Delta x}) + \frac{\Delta t^2}{2\Delta x^2} (2\cos \omega \Delta x - 2)$$
+$$  = 1 - 2 \frac{\Delta t }{\Delta x} i \sin \omega \Delta x + \frac{\Delta t^2}{\Delta x^2} (i\sin \omega\Delta x)^2$$
+$$ = (1-i\sin \omega \Delta x)^2$$
+其结果模长是增加的，所以是有耗散的；同时因为其频率域是非线性的，所以是色散的
